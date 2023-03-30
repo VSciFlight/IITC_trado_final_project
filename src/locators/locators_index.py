@@ -5,3 +5,5 @@ from src.locators.search_locators import SearchLocators
 from src.locators.contact_locators import ContactLocators
 from src.locators.sidebar_locators import SidebarLocators
 from src.locators.login_locators import LoginLocators
+from src.locators.register_locators import RegisterLocators
+from src.locators.personal_area_locators import PersonalLocators

@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait as WDW
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.action_chains import ActionChains
 
 from src.locators.locators_index import HomePageLocators
 
@@ -24,6 +25,7 @@ import pytest
 
 from selenium.common import exceptions as sel_except
 
+url = 'https://qa.trado.co.il/'
 
 def setup_driver(modal=False):
     url = 'https://qa.trado.co.il/'

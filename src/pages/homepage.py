@@ -67,3 +67,16 @@ def get_title_item_count(driver):
 def get_grid_item_count(driver):
     items = u.WDW(driver, 5).until(u.EC.visibility_of_all_elements_located(HomePageLocators.homeloc['grid_items_collection']))
     return len(items)
+
+
+def click_that(driver, location):
+    u.WDW(driver, 5).until(u.EC.visibility_of_element_located(HomePageLocators.homeloc[location])).click()
+
+
+def get_elements(driver, location):
+    try:
+        elems = u.WDW(driver, 5).until(u.EC.visibility_of_all_elements_located(HomePageLocators.homeloc[location]))
+        return elems
+    except u.sel_except.TimeoutException:
+        print("No categories were found")
+        return 0

@@ -26,3 +26,36 @@ def insert_code_into_cells(driver, phone='0500000000'):
 
 def click_verify_button(driver):
     u.WDW(driver, 5).until(u.EC.visibility_of_element_located(LoginLocators.logloc['code_verify'])).click()
+
+
+def get_login_indication(driver):
+    indic = u.WDW(driver, 5).until(u.EC.visibility_of_element_located(LoginLocators.logloc['personal'])).text
+    return indic
+
+
+def just_login_in_one_line_code(driver, phone, remember_me=False):
+    click_login(driver)
+    fill_login_info(driver, phone)
+    if remember_me:
+        click_that(driver, 'login_remember_me')
+
+    click_that(driver, 'login_btn')
+    insert_code_into_cells(driver, phone)
+    click_verify_button(driver)
+
+
+def click_that(driver, location):
+    u.WDW(driver, 5).until(u.EC.visibility_of_element_located(LoginLocators.logloc[location])).click()
+
+
+def get_element_logout_button(driver):
+    elem = driver.find_element(u.By.XPATH, '//*[@class="header_logOut"]')
+    return elem
+
+
+def just_logout_man(driver):
+    logout_element = get_element_logout_button(driver)
+    action = u.ActionChains(driver)
+    action.move_to_element(logout_element)
+    action.click(logout_element)
+    action.perform()

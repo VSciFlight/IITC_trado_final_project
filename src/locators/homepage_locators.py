@@ -8,7 +8,12 @@ class HomePageLocators:
     homeloc = dict()
 
     homeloc['popup_modal'] = (u.By.XPATH, '//*[contains(@class, "modal_modalWrapper")]')
+    homeloc['modal_restaurant'] = (u.By.XPATH, '//*[text()="מסעדות"]')
+    homeloc['modal_cocktail'] = (u.By.XPATH, '//*[text()="cocktail"]')
+    homeloc['modal_save'] = (u.By.XPATH, '//*[@class="store_saveBtn"]')
     homeloc['close_pop_up'] = (u.By.XPATH, '//*[@id="root"]/div/div[4]/div/span/i')
+
+    homeloc['navbar_list'] = (u.By.XPATH, '//*[@class="store_store "]/div/div[@class="verticalMenu_verticalMenu "]/descendant::a')
 
     homeloc['slider_next'] = (u.By.XPATH, '//*[@class="control-arrow control-next"]')
     homeloc['slider_prev'] = (u.By.XPATH, '//*[@class="control-arrow control-prev"]')

@@ -11,6 +11,12 @@ def driver():
     yield get_driver
     get_driver.close()
 
+@u.pytest.fixture
+def driver_mod():
+    get_driver = u.setup_driver(modal=True)
+    yield get_driver
+    get_driver.close()
+
 @u.pytest.mark.functional
 def test_select_item_in_grid(driver):
     """
@@ -163,3 +169,67 @@ def test_counted_items_vs_grid_items(driver):
     grid_count = hp.get_grid_item_count(driver)
 
     assert item_count == grid_count
+
+
+def test_prefer_misadot_in_popup(driver_mod):
+    """
+    Homepage - Preferences - Selecting "Misadot" results in having restaurants products related
+    :param driver:
+    :return:
+    """
+    u.WDW(driver_mod, 5).until(u.EC.presence_of_element_located(HomePageLocators.homeloc['popup_modal']))
+    hp.click_that(driver_mod, 'modal_restaurant')
+    hp.click_that(driver_mod, 'modal_save')
+
+    num_of_elements = len(hp.get_elements(driver_mod, 'navbar_list'))
+
+    assert num_of_elements == 4
+
+
+def test_prefer_cocktails_in_popup(driver_mod):
+    """
+    Homepage - Preferences - Selecting "cocktail" results in having cocktails products related    :param driver:
+    "apparently drinks and cannabis goes together"
+    :return:
+    """
+    u.WDW(driver_mod, 5).until(u.EC.presence_of_element_located(HomePageLocators.homeloc['popup_modal']))
+    hp.click_that(driver_mod, 'modal_cocktail')
+    hp.click_that(driver_mod, 'modal_save')
+
+    num_of_elements = len(hp.get_elements(driver_mod, 'navbar_list'))
+
+    assert num_of_elements == 5
+
+def test_prefer_none_in_popup(driver_mod):
+    """
+    Popup - Preferences - No selection will give me all products to view
+    expecting all the departments to be available since I didn't choose yey
+
+    :return:
+    """
+    u.WDW(driver_mod, 5).until(u.EC.presence_of_element_located(HomePageLocators.homeloc['popup_modal']))
+    hp.click_that(driver_mod, 'modal_save')
+
+    num_of_elements = len(hp.get_elements(driver_mod, 'navbar_list'))
+
+    assert num_of_elements == 8
+
+def test_prefer_both_in_popup(driver_mod):
+    """
+    Popup - Preferences - No selection will give me all products to view
+    expecting all the departments to be available since I chose all
+    :return:
+    """
+    u.WDW(driver_mod, 5).until(u.EC.presence_of_element_located(HomePageLocators.homeloc['popup_modal']))
+    hp.click_that(driver_mod, 'modal_cocktail')
+    hp.click_that(driver_mod, 'modal_restaurant')
+    hp.click_that(driver_mod, 'modal_save')
+
+    num_of_elements = len(hp.get_elements(driver_mod, 'navbar_list'))
+
+    assert num_of_elements == 8
+
+
+
+
+

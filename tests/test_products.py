@@ -4,6 +4,7 @@ from src.locators.locators_index import ProductLocators
 import src.pages.homepage as hp
 import src.pages.products as prod
 import src.pages.sidebar as sbar
+import src.pages.login as lg
 
 @u.pytest.fixture
 def driver():
@@ -120,3 +121,25 @@ def test_stocks_details(driver):
     detailed_stock = prod.get_product_detailed_stock(driver)
 
     assert card_stock == detailed_stock
+
+
+def test_suggested_products_are_the_same_supplier(driver):
+    """
+    Products - Suggested - Items are actually from the same supplier
+    :param driver:
+    :return:
+    """
+
+    hp.click_on_random_item(driver)
+    product_name = str(prod.get_product_name(driver))
+    store_id_in_db = u.db_get.get_product_supplier(product_name)
+
+    suggested_items = prod.get_elements(driver, 'suggested_items_list')
+    if not suggested_items:
+        print("No suggested items were found for this product")
+
+    else:
+        for i in range(len(suggested_items)):
+            sugg_str = str(suggested_items[i].text)
+            suggested_in_db = u.db_get.get_product_supplier(sugg_str)
+            assert suggested_in_db == store_id_in_db
