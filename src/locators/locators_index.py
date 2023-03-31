@@ -7,3 +7,4 @@ from src.locators.sidebar_locators import SidebarLocators
 from src.locators.login_locators import LoginLocators
 from src.locators.register_locators import RegisterLocators
 from src.locators.personal_area_locators import PersonalLocators
+from src.locators.checkout_locators import CheckoutLocators

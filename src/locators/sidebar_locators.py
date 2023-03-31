@@ -16,6 +16,7 @@ class SidebarLocators:
     sideloc['distro_cost'] = (u.By.XPATH, '//*[@class="cart_prices"]/child::h6[2]/span[2]')
     sideloc['vat'] = (u.By.XPATH, '//*[@class="cart_prices"]/child::h6[3]/span[2]')
     sideloc['total_sum'] = (u.By.XPATH, '//*[@class="cart_prices"]/child::h6[4]/span[2]')
+    sideloc['checkout'] = (u.By.XPATH, '//*[@class="cart_footer cart_footer_fullProduct"]/descendant::button')
 
     sideloc['card_qna'] = (u.By.XPATH, '//*[@class="cardInfo_cardInfo"][1]/div/a')
     sideloc['card_contact'] = (u.By.XPATH, '//*[@class="cardInfo_cardInfo"][2]/div/a')
