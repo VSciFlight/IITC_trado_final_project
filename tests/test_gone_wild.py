@@ -34,4 +34,7 @@ def test_buy_item_then_see_it_in_last_order(driver):
     sbar.click_that(driver, 'checkout')
     u.sleep(5)
 
-    chk.fill_this_field(driver, 'store_name', )
+    chk.fill_this_field(driver, 'store_name', store_details['store_name'])
+    chk.fill_this_field(driver, 'store_bn', store_details['store_bn'])
+    chk.fill_this_field(driver, 'store_email', store_details['store_email'])
+
