@@ -47,6 +47,7 @@ The orange frame is the main directory. <br>
 
 <h2> Conclusions </h2>
 In total there were 51 automated tests which ran.
+<div style=""">
 <table style="float:left">
 <thead>
     <tr>
@@ -72,6 +73,8 @@ In total there were 51 automated tests which ran.
 </tr>
 </table>
 <img style="float:right; width:350px; height: 260px;" src="media\allure_test_results.png">
+</div>
+
 
 <div style="display:flex">
 <table style="float:left">
@@ -103,4 +106,4 @@ In total there were 51 automated tests which ran.
 
 <br>
 <br>
-<h4>After wandering and testing the site I do not suggest to publish it due a big number of failed tests</h4>
+<h4>After wandering and testing the site I do NOT suggest to publish it due a big number of failed tests</h4>
