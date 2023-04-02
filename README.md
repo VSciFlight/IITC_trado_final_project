@@ -47,7 +47,7 @@ The orange frame is the main directory. <br>
 
 <h2> Conclusions </h2>
 In total there were 51 automated tests which ran.
-<div style=""">
+<div style="display:flex;">
 <table style="float:left">
 <thead>
     <tr>
