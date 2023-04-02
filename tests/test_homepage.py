@@ -80,7 +80,7 @@ def test_grid_sort_by_low_to_high(driver):
             raise AssertionError(f"Sorting by low to high doesn't operate as it should be. \nEXPECTED: {sorted_pricelist_low_to_high[ind]} \nReality: {item_price_list[ind]}")
 
 @u.pytest.mark.functional
-def test_grid_sort_by_low_to_high(driver):
+def test_grid_sort_by_high_to_low(driver):
     """
     Homepage - Grid - Sorting actually sorts (price)
     :param driver:

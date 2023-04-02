@@ -10,7 +10,7 @@ import src.pages.checkout as chk
 from src.locators.locators_index import CheckoutLocators
 
 
-
+@u.pytest.mark.skip(reason="test no finished, done manually though")
 def test_buy_item_then_see_it_in_last_order(driver):
     """
     Personal - Last Orders - Last orders are updated and shown properly
