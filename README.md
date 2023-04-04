@@ -1,7 +1,7 @@
 # IITC_trado_final_project
 This is the final project I got from IITC, test the [Trado](https://qa.trado.co.il/) website. 
 <br>
-[Traceability Table](https://docs.google.com/spreadsheets/d/1jfXS1ULfvSClLK54Y-GzYlcyPZ_MT5OyncIkZ5uJANw/edit?usp=sharing)
+[Traceability Table](https://docs.google.com/spreadsheets/d/1jfXS1ULfvSClLK54Y-GzYlcyPZ_MT5OyncIkZ5uJANw/edit?usp=sharing) <br>
 [Canva Presentation](https://www.canva.com/design/DAFequwnR4M/JJ-JAafHaiCT2Y0QvwMWVA/view?utm_content=DAFequwnR4M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
 <h2>Background</h2>
