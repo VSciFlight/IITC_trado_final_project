@@ -160,7 +160,7 @@ def test_add_new_product(driver):
     """
     random_num = u.random.randint(1, 200)
     phone = '0500000000'
-    product_name = 'Deluxe_Toilet_Paper_' + str(random_num)
+    product_name = 'Deluxe Toilet Paper ' + str(random_num)
     print(product_name)
 
     lg.just_login_in_one_line_code(driver, phone)
