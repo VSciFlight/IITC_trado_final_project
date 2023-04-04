@@ -2,6 +2,7 @@
 This is the final project I got from IITC, test the [Trado](https://qa.trado.co.il/) website. 
 <br>
 [Traceability Table](https://docs.google.com/spreadsheets/d/1jfXS1ULfvSClLK54Y-GzYlcyPZ_MT5OyncIkZ5uJANw/edit?usp=sharing)
+[Canva Presentation](https://www.canva.com/design/DAFequwnR4M/JJ-JAafHaiCT2Y0QvwMWVA/view?utm_content=DAFequwnR4M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
 <h2>Background</h2>
 Trado is an e-commerce website used for suppliers and stores. Stores can buy products which are offered by the suppliers on the site.
